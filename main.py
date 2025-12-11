@@ -20,6 +20,10 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
+import warnings
+os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2'
+warnings.filterwarnings('ignore')
+
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 

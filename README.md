@@ -1,6 +1,6 @@
-# Sedile: Privacy-Preserving Distributed Deep Learning
+# Sedile: Efficient and Privacy-Preserving Distributed Deep Learning for Non-IID Data
 
-A scalable framework for privacy-preserving distributed deep learning that addresses both computational scalability and privacy concerns in federated learning environments.
+A scalable framework for privacy-preserving distributed deep learning that addresses both computational scalability and privacy concerns for non-IID data.
 
 ## Overview
 
@@ -69,12 +69,6 @@ sedile/
 git clone <repository-url>
 cd sedile
 
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate     # Windows
-
 # Install dependencies
 pip install -r requirements.txt
 ```
@@ -122,12 +116,6 @@ Reproduce all paper experiments:
 python experiments/run_all.py --output-dir ./outputs/batch
 ```
 
-Quick test with reduced rounds:
-
-```bash
-python experiments/run_all.py --quick
-```
-
 Run specific datasets:
 
 ```bash
@@ -163,17 +151,6 @@ python experiments/run_all.py --datasets mnist cifar10
 - Batch size: B = 32
 - Learning rate: lr = 0.015
 - Training rounds: R = 300
-
-## Privacy Guarantees
-
-### T-Privacy Threshold
-
-The framework provides T-privacy guarantees where any coalition of fewer than T clients cannot infer individual client data. Default T = 3.
-
-### Threat Model
-
-1. **Honest-but-curious server**: Server follows protocol but attempts to infer client data
-2. **Colluding clients**: Up to T-1 clients may collude to infer other clients' data
 
 ## Output Structure
 
@@ -232,35 +209,6 @@ partitioner = create_partitioner(
     metric='euclidean'
 )
 partitions = partitioner.partition(distributions)
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **CUDA out of memory**
-   - Reduce batch size: `--batch-size 16`
-   - Use CPU: `--device cpu`
-
-2. **Slow training**
-   - Use GPU if available
-   - Reduce number of clients or rounds for testing
-
-3. **Poor convergence**
-   - Try different learning rates
-   - Increase local epochs
-   - Check data distribution
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{sedile2024,
-  title={Sedile: Privacy-Preserving Distributed Deep Learning},
-  author={Anonymous},
-  year={2024}
-}
 ```
 
 ## License
