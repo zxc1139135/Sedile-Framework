@@ -1,11 +1,5 @@
 """
 Visualization Utilities.
-
-Provides functions for plotting:
-- Training curves
-- Data distribution analysis
-- Client partition visualization
-- Performance comparisons
 """
 
 import os

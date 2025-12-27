@@ -1,14 +1,5 @@
 """
 Harmonic Coding Implementation.
-
-Implements harmonic coding for privacy-preserving gradient computation
-in distributed deep learning. Key properties:
-- Supports exact computation of non-linear functions (e.g., ReLU)
-- Provides privacy protection for gradient updates
-- Enables efficient aggregation at the server
-
-Reference: Yu & Avestimehr (2019). Harmonic coding: An optimal linear code 
-for privacy-preserving gradient-type computation.
 """
 
 import numpy as np

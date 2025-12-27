@@ -1,6 +1,5 @@
 """
 Configuration settings for Sedile framework.
-Experimental parameters aligned with paper specifications.
 """
 
 import os

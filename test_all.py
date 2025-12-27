@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 Test script for Sedile framework.
-
-Runs basic tests on all components to verify correct implementation.
 """
 
 import sys

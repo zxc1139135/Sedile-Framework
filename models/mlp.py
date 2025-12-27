@@ -1,8 +1,5 @@
 """
 Multi-Layer Perceptron (MLP) Model.
-
-Architecture: Two hidden layers with 256 nodes each.
-Used for MNIST dataset as specified in the paper.
 """
 
 import torch

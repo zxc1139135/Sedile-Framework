@@ -1,13 +1,5 @@
 """
 Main Experiment Runner for Sedile Framework.
-
-Orchestrates the complete privacy-preserving distributed learning pipeline:
-1. Data loading and non-IID distribution
-2. Similarity-driven client partitioning
-3. Intra-partition data sharing
-4. Inter-partition model training
-
-Experimental configurations match the paper specifications.
 """
 
 import os

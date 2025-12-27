@@ -1,14 +1,5 @@
 """
 Intra-Partition Data Sharing Protocol.
-
-Implements the data sharing mechanism within partitions:
-1. Dataset quantization to finite field
-2. Shamir secret sharing for dataset distribution
-3. Harmonic coding for encoded dataset generation
-
-This protocol enables clients to obtain privacy-preserving versions
-of the partition's dataset while maintaining T-privacy against
-colluding adversaries.
 """
 
 import numpy as np

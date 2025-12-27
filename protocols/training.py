@@ -1,13 +1,5 @@
 """
 Inter-Partition Model Training Protocol.
-
-Implements the training workflow across partitions:
-1. Local model training on encoded datasets
-2. Secure gradient aggregation at the server
-3. Gradient decoding and model update
-
-This protocol provides dual-threat protection against both
-the server and colluding clients.
 """
 
 import numpy as np

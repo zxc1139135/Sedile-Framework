@@ -1,12 +1,5 @@
 """
 Similarity-Driven Client Partitioning Protocol.
-
-Implements Protocol 1 from the paper:
-- Privacy-preserving similarity computation using Paillier encryption
-- Three similarity metrics: Euclidean distance, Cosine similarity, KL-divergence
-- Strategic partition allocation to balance inter-partition heterogeneity
-
-This protocol addresses scalability by limiting data sharing to within partitions.
 """
 
 import numpy as np
@@ -217,11 +210,6 @@ class PrivacyPreservingSimilarity:
 class ClientPartitioner:
     """
     Similarity-driven client partitioning.
-    
-    Partitions clients into groups such that:
-    1. Similar clients are distributed across different partitions
-    2. Each partition contains heterogeneous clients
-    3. Inter-partition distribution differences are minimized
     """
     
     def __init__(

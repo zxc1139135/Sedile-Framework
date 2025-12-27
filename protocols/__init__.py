@@ -1,10 +1,5 @@
 """
 Privacy-preserving protocols for Sedile framework.
-
-Implements three core protocols:
-1. Similarity-driven client partitioning
-2. Intra-partition data sharing
-3. Inter-partition model training
 """
 
 from .partitioning import (

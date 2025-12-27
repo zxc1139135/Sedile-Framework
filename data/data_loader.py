@@ -1,11 +1,5 @@
 """
 Data Loading and Non-IID Distribution.
-
-Handles loading of datasets and simulating non-IID data distributions:
-- Dirichlet distribution for label skew
-- Pathological distribution for extreme non-IID scenarios
-
-Supported datasets: MNIST, Fashion-MNIST, CIFAR-10, SVHN
 """
 
 import numpy as np

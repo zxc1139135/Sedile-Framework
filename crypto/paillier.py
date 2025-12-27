@@ -1,12 +1,5 @@
 """
 Paillier Cryptosystem Implementation.
-
-Implements the Paillier public-key cryptosystem supporting:
-- Homomorphic addition of ciphertexts
-- Scalar multiplication of ciphertexts
-
-Used in the similarity-driven client partitioning protocol for
-privacy-preserving similarity computation.
 """
 
 import random

@@ -1,13 +1,5 @@
 """
 Shamir Secret Sharing Implementation.
-
-Implements (T, N)-threshold secret sharing scheme where:
-- A secret is split into N shares
-- Any T or more shares can reconstruct the secret
-- Fewer than T shares reveal nothing about the secret
-
-Used in the intra-partition data sharing protocol for
-privacy-preserving dataset distribution among clients.
 """
 
 import numpy as np

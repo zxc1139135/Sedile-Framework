@@ -1,8 +1,5 @@
 """
 LeNet-5 Model Implementation.
-
-Classic convolutional neural network architecture.
-Used for Fashion-MNIST dataset as specified in the paper.
 """
 
 import torch

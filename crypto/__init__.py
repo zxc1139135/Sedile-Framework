@@ -1,10 +1,5 @@
 """
 Cryptographic primitives for Sedile framework.
-
-Provides implementations of:
-- Paillier encryption for privacy-preserving similarity computation
-- Shamir secret sharing for secure data distribution
-- Harmonic coding for privacy-preserving gradient computation
 """
 
 from .paillier import (

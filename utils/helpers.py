@@ -1,11 +1,5 @@
 """
 Utility functions for Sedile framework.
-
-Provides helper functions for:
-- Random seed setting
-- Logging configuration
-- Metrics computation
-- Result saving and loading
 """
 
 import os

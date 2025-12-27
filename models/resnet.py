@@ -1,8 +1,5 @@
 """
 ResNet Model Implementation.
-
-ResNet-18 architecture adapted for SVHN (32x32 images).
-Used for SVHN dataset as specified in the paper.
 """
 
 import torch

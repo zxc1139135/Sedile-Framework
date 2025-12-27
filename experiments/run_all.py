@@ -1,8 +1,5 @@
 """
 Batch experiment runner for reproducing paper results.
-
-Runs experiments across all datasets and distribution settings
-as specified in the paper's experimental evaluation.
 """
 
 import os

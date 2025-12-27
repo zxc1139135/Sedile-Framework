@@ -1,13 +1,3 @@
-"""
-Main experiment runner for Sedile framework.
-
-Executes the complete privacy-preserving distributed learning pipeline:
-1. Data loading and non-IID partitioning
-2. Similarity-driven client partitioning
-3. Intra-partition data sharing
-4. Inter-partition model training
-"""
-
 import os
 import sys
 import time
@@ -50,9 +40,6 @@ from utils import (
 class SedileExperiment:
     """
     Main experiment class for Sedile framework.
-    
-    Orchestrates the complete training pipeline with privacy-preserving
-    protocols for distributed deep learning.
     """
     
     def __init__(
@@ -146,9 +133,6 @@ class SedileExperiment:
     def run(self) -> Dict[str, List[float]]:
         """
         Execute complete experiment.
-        
-        Returns:
-            Training history dictionary
         """
         set_seed(self.seed)
         start_time = time.time()
@@ -216,7 +200,7 @@ class SedileExperiment:
             num_clients=self.num_clients,
             num_partitions=self.num_partitions,
             metric=self.similarity_metric,
-            use_encryption=False  # Set to True for full privacy
+            use_encryption=False
         )
         
         partitions = partitioner.partition(distributions, seed=self.seed)
@@ -248,7 +232,6 @@ class SedileExperiment:
         partitions: List[List[int]]
     ) -> Dict[str, List[float]]:
         """Execute distributed training."""
-        # Create client data loaders
         client_data_loaders = {
             i: data_loader.get_client_loader(i)
             for i in range(self.num_clients)
@@ -296,19 +279,6 @@ class SedileExperiment:
         # Save distributions
         distributions = data_loader.get_all_distributions()
         self.results_saver.save_numpy(distributions, 'client_distributions')
-        
-        # Generate plots
-        plot_training_curves(
-            history,
-            save_path=os.path.join(self.output_dir, 'training_curves.png'),
-            title=f'Sedile - {self.dataset.upper()} ({self.distribution_type}, {self.distribution_param})'
-        )
-        
-        plot_distribution_heatmap(
-            distributions,
-            save_path=os.path.join(self.output_dir, 'distribution_heatmap.png'),
-            title=f'Client Data Distribution ({self.distribution_type}, {self.distribution_param})'
-        )
         
         self.logger.info(f"\nResults saved to: {self.output_dir}")
 

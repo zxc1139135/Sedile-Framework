@@ -1,11 +1,5 @@
 """
 Neural network models for Sedile framework.
-
-Model-dataset mapping as specified in the paper:
-- MNIST: MLP with two hidden layers (256 nodes each)
-- Fashion-MNIST: LeNet-5
-- CIFAR-10: VGG
-- SVHN: ResNet-18
 """
 
 import torch.nn as nn

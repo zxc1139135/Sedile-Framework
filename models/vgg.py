@@ -1,8 +1,5 @@
 """
 VGG Model Implementation.
-
-VGG-style architecture adapted for CIFAR-10.
-Used for CIFAR-10 dataset as specified in the paper.
 """
 
 import torch
