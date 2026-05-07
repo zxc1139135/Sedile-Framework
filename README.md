@@ -1,4 +1,4 @@
-# Sedile: Efficient and Privacy-Preserving Distributed Deep Learning for Non-IID Data
+# Sedile: Tackling Non-IID Data in Distributed Deep Learning via Secure Sharing
 
 A scalable framework for privacy-preserving distributed deep learning that addresses both computational scalability and privacy concerns for non-IID data.
 
@@ -210,7 +210,3 @@ partitioner = create_partitioner(
 )
 partitions = partitioner.partition(distributions)
 ```
-
-## License
-
-This project is released for academic research purposes.
