@@ -1,0 +1,18 @@
+seed: 2026
+dataset: cifar10
+model: fixup_resnet20
+federated:
+  owners: 20
+  admitted_per_round: 16
+  batch_size_per_owner: 128
+  dirichlet_alpha: 0.3
+  rounds: 500
+  learning_rate: null
+  momentum: 0.9
+  weight_decay: 0.0005
+protocol:
+  field_modulus: 2305843009213693951
+  fractional_bits: 16
+  secure_roundtrip: true
+implementation_choices:
+  augmentation: false

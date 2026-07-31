@@ -1,0 +1,52 @@
+seed: 2026
+field:
+  modulus: 2305843009213693951
+  fractional_bits: 16
+  input_rounding: nearest
+  truncation: signed_floor
+  activation_clip: [-8.0, 8.0]
+  adjoint_clip: [-4.0, 4.0]
+harmonic:
+  nonterminal_blocks: 1
+  degree: 2
+  required_labels: 3
+  worker_slots: 30
+  replicas_per_label: 10
+sharing:
+  dual_server:
+    type: additive
+    threshold: 2_of_2
+  committee:
+    type: shamir
+    degree: 2
+    members: 7
+    required_active: 5
+approximations:
+  exp_segments: 3
+  exp_domain: [-8.0, 0.0]
+  reciprocal_newton_steps: 2
+  inverse_sqrt_segments: 3
+  inverse_sqrt_newton_steps: 2
+federated:
+  owners: 20
+  admitted_per_round: 16
+  batch_size_per_owner: 128
+  dirichlet_alpha: 0.3
+  rounds: 500
+  optimizer: fedsgd
+  learning_rate: null
+  momentum: 0.9
+  weight_decay: 0.0005
+experiments:
+  protocol_fidelity:
+    - {dataset: mnist, model: smallcnn}
+  utility:
+    - {dataset: cifar10, model: vgg11_no_batchnorm}
+    - {dataset: cifar100, model: vgg11_no_batchnorm}
+    - {dataset: cifar10, model: fixup_resnet20}
+    - {dataset: cifar100, model: resnet20_batchnorm}
+  lan: {bandwidth_gbps: 10, rtt_ms: 0.5}
+  wan: {bandwidth_mbps: 200, rtt_ms: 25}
+
+implementation_choices:
+  augmentation: false

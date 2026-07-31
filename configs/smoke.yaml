@@ -1,0 +1,13 @@
+seed: 8
+field:
+  modulus: 2305843009213693951
+  fractional_bits: 16
+harmonic:
+  blocks: 1
+  degree: 2
+  c: 7
+  betas: [2]
+sharing:
+  additive_parties: 2
+  shamir_members: 7
+  shamir_threshold: 2

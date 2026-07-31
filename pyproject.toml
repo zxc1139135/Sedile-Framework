@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmobridge"
+version = "0.1.0"
+description = "Harmonic-coded federated learning protocol simulator"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+full = ["torchvision>=0.17"]
+vision = ["torchvision>=0.17"]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+harmobridge = "harmobridge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
