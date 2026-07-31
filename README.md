@@ -57,8 +57,6 @@ The runner saves `checkpoint.pt` every round, supports `--resume`, appends test 
 
 By default, aggregated gradients pass through a 61-bit-prime, 16-fractional-bit encode/share/reconstruct/decode round trip before the server update. This checks the fixed-point and additive-share representation used by the protocol simulator. `--plaintext-aggregate` disables this validation path for a baseline run.
 
-The local simulator validates algebraic correctness and the paper's bridge/operator design.
-
 Availability calculations:
 
 ```bash
